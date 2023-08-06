@@ -50,6 +50,7 @@ Sunum in dokumantasyon (Postman,swagger vs.)
 
 <img src="Screenshots/katmanlar.png" width=300> 
 
+-----------------------------------------------------------------------
 ### 🌱DATA KATMANI
 
 ✎ Entitylerimi Data katmanında oluşturuyorum. Burda örnek olarak Bank entitymi görebilirsiniz.Burda daha temel olan her entity de olan id fieldını base katmanımda IdBaseModel isimli bir sınıfta tutuyorum ve burda kalıtım alarak entity 'nin id fieldının olmsını sağlıyorum.Böylece her sınıfım için gereksiz kod tekrarı yapmamış oluyorum. Diğer entityleri projenin içerisinde inceleyebilirsiniz.
@@ -186,7 +187,7 @@ public class BankRepository : GenericRepository<Bank>, IBankRepository
   services.AddScoped<IBankRepository, BankRepository>();
 //diğerlerine projeden bakabilirsiniz
 ```
-
+-----------------------------------------------------------------------
 ### 🌱SCHEMA KATMANI
 
 🪐 Controllerlarda kullanıcağım request ve response sınıflarımı bu katmanda oluşturuyorum.Bu şekilde ayırma yaparak kullanıcıların isteklerde girdiği alanlar sadece requestllerde olucak onun dışında modelime ait diğer alanları girmelerine gerek kalmayacak.Ayrıca responselardada sadece görmelerini istediğim modellerimide oluşturuyorum.
@@ -262,7 +263,7 @@ Bunlarıda mutlaka startup sınıfıma ekliyorum.
 ```c#
  services.AddScoped<IValidator<BankRequest>, BankRequestValidators>();
 ```
-
+-----------------------------------------------------------------------
 ### 🌱SERVİCE KATMANI
 
 ⚓ Bu katmanda işlemlerimiz gerçekleştiriceğimiz controller sınıflarımı oluşturuyorum. Burda BankControlerlarımda modelimin data katmanındaki repository 'sine erişmek için  private readonly IBankRepository repository,  Fluentvalidationdaki validator işlemlerime erişmek için  private readonly IValidator<BankRequest> validator, Maplleme işlemleri için ise  private readonly IMapper mapper ı kullanıyorum.
@@ -459,10 +460,12 @@ public class DuesBillController : ControllerBase
 
 <img  src="Screenshots/Authorize.png" width=500> 
 
+-----------------------------------------------------------------------
 ### 🌱BASE KATMANI
 
 🖇️ Bu katmanda daha temel sınıflarımı tutuyorum.Böylece bunlara proje düzeyinde yazmaktansa bir kere yazıp istediğimde erişimi sağlıyorum. Burda bir apiresponse sınıfı var.Bir şifre oluşturmak için istenilen PasswordGenerator sınıfım var.Bir de IdBaseModel sınıfım var.
 
+-----------------------------------------------------------------------
 
 ### 🌱PAYMENT SERVİCE
 
