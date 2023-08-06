@@ -30,7 +30,7 @@ Web projesi için: .Net
 Sistemin yönetimi/database için MS SQL Server / PostgreSQL
 Sunum in dokumantasyon (Postman,swagger vs.)  
 
-## PROJE DETAYLARI🌳
+## PROJE DETAYLARI📝
 
 ✎Öncelikle projemiz bir .Net projesidir .Projede veritabanı olarak MS SQL, dökümantasyon olarak Swagger kullanılmıştır. Generic Repository Pattern uygulanarak daha yönetilebilir bir sitem oluşturulmuştur. Ayrıca projemizde fluent validation ve auto mapper, json web token  da kullanılmıştır.
 
