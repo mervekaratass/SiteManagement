@@ -1,4 +1,4 @@
-# SiteManagement📝
+# Konut Site Yönetimi📝
 Bu proje Patika ile gerçekleştirilen Sipay .Net Bootcampinin final case projesidir. 
 
 📫Bizden istenilenlere bir bakalım.
